@@ -17,9 +17,8 @@ y = dataset.iloc[:, 1].values
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X,y,test_size = 0.33, random_state=0)
 
-# scaling algo in this course takes care of feature scaling
-#from sklearn.preprocessing import StandardScaler
-#sc_X = StandardScaler()
-#sc_y = StandardScaler()
-#X = sc_X.fit_transform(X)
-#y = sc_y.fit_transform(y)
+# Fitting simple linear regression model
+from sklearning.linear_model import LinearRegression
+
+regressor = LinearRegression()
+regressor.fit(X.train, y_train)
