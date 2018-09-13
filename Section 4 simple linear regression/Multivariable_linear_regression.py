@@ -46,10 +46,31 @@ X = np.append(arr=np.ones((50,1)).astype(int), values = X, axis = 1)
 X_opt = X[:,[0,1,2,3,4,5]]
 # pay attention capitalization !
 regressor_OLS = sm.OLS(endog = y, exog = X_opt).fit()
+regressor_OLS.summary()
 
+# x2 has highest P value 0.99 , delete it and run it again
+X_opt = X[:,[0,1,3,4,5]]
+# pay attention capitalization !
+regressor_OLS = sm.OLS(endog = y, exog = X_opt).fit()
+regressor_OLS.summary()
 
+# x1 has highest P value 0.94 , delete it and run it again
+X_opt = X[:,[0,3,4,5]]
+# pay attention capitalization !
+regressor_OLS = sm.OLS(endog = y, exog = X_opt).fit()
+regressor_OLS.summary()
 
+# x2 has highest P value 0.602 , delete it and run it again
+X_opt = X[:,[0,3,5]]
+# pay attention capitalization !
+regressor_OLS = sm.OLS(endog = y, exog = X_opt).fit()
+regressor_OLS.summary()
 
+# x2 has highest P value 0.060 , delete it and run it again
+X_opt = X[:,[0,3]]
+# pay attention capitalization !
+regressor_OLS = sm.OLS(endog = y, exog = X_opt).fit()
+regressor_OLS.summary()
 
 
 
