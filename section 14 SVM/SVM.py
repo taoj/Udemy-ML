@@ -28,7 +28,7 @@ from sklearn.svm import SVC
 # If none is given, 'rbf' will be used.
 # If a callable is given it is used to pre-compute the kernel matrix from data matrices;
 # that matrix should be an array of shape (n_samples, n_samples).
-classifier = SVC(kernel = 'poly', random_state = 0)
+classifier = SVC(kernel = 'rbf', random_state = 0)
 classifier.fit(X_train, y_train)
 
 
